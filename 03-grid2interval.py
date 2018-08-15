@@ -2,6 +2,8 @@
 
 """
 将格式从 TextGrid 转为 interval
+interval_ex -> Intervals
+版本：python3.5
 """
 
 
@@ -9,16 +11,18 @@ import os
 
 
 work_path = os.getcwd()
+
+# output path
 output_path = work_path + '/Intervals/'
 if not os.path.exists(output_path):
     os.mkdir(output_path)
 
-
+# input path
 input_path = work_path + '/interval_ex/'
 file_name_list = os.listdir(input_path)
 
 for file_name in file_name_list:
-    print file_name
+    print(file_name)
 
     input_file = open(input_path + file_name, 'r')
     input_txt = input_file.read()
