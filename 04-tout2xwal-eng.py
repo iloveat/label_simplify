@@ -3,6 +3,8 @@
 
 """
 将 tout 和 interval 文件生成 xwal，增加英文字母版
+Intervals + tout -> Intervals
+版本：python3.5
 """
 
 
@@ -40,27 +42,11 @@ letter = {'A': 1,
 work_path = os.getcwd()
 intervalpath = work_path + '/Intervals/'
 
-newintervalpath = work_path + '/interval1/'
-if not os.path.exists(newintervalpath):
-  os.mkdir(newintervalpath)
-
-errorintervalpath = work_path + '/interval2/'
-if not os.path.exists(errorintervalpath):
-  os.mkdir(errorintervalpath)
 
 toutpath = work_path + '/tout/'
 xwalpath = work_path + '/xwal/'
 if not os.path.exists(xwalpath):
   os.mkdir(xwalpath)
-
-
-###排查错误阶段，需要打开此步骤
-
-# intervallist=os.listdir(intervalpath)
-# for intervalfile in intervallist:                   #遍历interval目录
-#   print(intervalfile)
-#   shutil.move(intervalpath+intervalfile,errorintervalpath+intervalfile) #移动错误文件到新目录
-#   break
 
 
 intervallist=os.listdir(intervalpath)
@@ -385,4 +371,3 @@ for intervalfile in intervallist:                   #遍历interval目录
   toutFile.close()
   xwalFile.close()
 
-  # shutil.move(intervalpath+intervalfile,newintervalpath+intervalfile) #移动正确文件到新目录

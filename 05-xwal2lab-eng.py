@@ -8,15 +8,8 @@
 import re , os , shutil
 
 curpath=os.getcwd()
-xwalpath=curpath+r'\xwal\\'
-xwal1=os.path.exists('xwal1')
-if(not xwal1):
-  os.mkdir('xwal1')
-newxwalpath=curpath+r'\xwal1\\'
-xwal2=os.path.exists('xwal2')
-if(not xwal2):
-  os.mkdir('xwal2')
-errorxwalpath=curpath+r'\xwal2\\'
+xwalpath=curpath+'/xwal/'
+
 lab=os.path.exists('label')
 if(not lab):
   os.mkdir('label')
@@ -165,14 +158,7 @@ def rearFinal(tmp):
     ret=0
   return ret
 #******************************************
-###排查错误阶段，需要打开此步骤
-'''
-xwallist=os.listdir(xwalpath)
-for xwalone in xwallist:
-  print(xwalone)
-  shutil.move(xwalpath+xwalone,errorxwalpath+xwalone) #移动错误文件到错误目录
-  break
-'''
+
 xwallist=os.listdir(xwalpath)
 for xwalone in xwallist:
   print(xwalone)
@@ -744,4 +730,3 @@ for xwalone in xwallist:
     Lab=('%10s'+' '+'%10s'+' '+aLab+'B'+bLab+'C'+cLab+'D'+dLab+'E'+eLab+'F'+fLab+'G'+gLab+'H'+hLab+'\n')%(starttime,endtime)
     labfile.write(Lab)
   labfile.close()
-#  shutil.move(xwalpath+xwalone,newxwalpath+xwalone) #移动正确文件到新目录
