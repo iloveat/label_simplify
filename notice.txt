@@ -1,0 +1,22 @@
+1、韵律文件->tout （splitTout.py）
+2、TextGrid->interval （text2interval.py）
+3、修改grid（chagegrid.py）
+4、tout、interval->xwal（01-tout2xwal-eng.py）
+5、xwal->lab（02-xwal2lab-eng.py）
+6、lab->lab（03-gen_new_label.pl）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
